@@ -22,15 +22,6 @@ else{console.log(newdo);
     // console.log(newdotrash);
     let newhr=document.createElement('hr')
     
-    
-    trash1.className='fa fa-remove'
-    trash1.id="trash"
-    console.log(trash1);
-    
-    newdoli.innerHTML=newdo
-    container.append()
-    
-    myul.append(newdoli,trash1,newhr)
 
 
     let newcheck=document.createElement('li')
@@ -40,10 +31,23 @@ else{console.log(newdo);
     newcheck.style.display="none"
     
     
+    trash1.className='fa fa-remove'
+    trash1.id="trash"
+    console.log(trash1);
+    
+    newdoli.innerHTML=newdo
+    container.append()
+    
+    myul.append(newdoli,trash1,newcheck,newhr)
+
+
+
+    
     trash1.addEventListener('click',function(){
         newdoli.remove()
         trash1.remove()
         newhr.remove()
+        newcheck.remove()
     
     })
     deleteme.addEventListener('click',function(){
