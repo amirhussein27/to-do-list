@@ -55,7 +55,7 @@ else{console.log(newdo);
        newdoli.addEventListener('click',function(){
         if( newdoli.style.textDecoration!="line-through"){  
               newdoli.style.textDecoration="line-through"
-            //   newdoli.style.opacity=0.35
+              newdoli.style.opacity=0.35
         newcheck.style.display="block"
         // newcheck.style.textDecoration="none"
 
