@@ -13,6 +13,11 @@ if(myinp.value==""){
 else{console.log(newdo);
     let newdoli=document.createElement('li')
     newdoli.id="newli"
+
+    let newicon=document.createElement('li')
+    newicon.id="newli"
+    newicon.className='fa fa-square-o'
+
     let trash1=document.createElement('li')
     // console.log(newdotrash);
     let newhr=document.createElement('hr')
@@ -26,6 +31,13 @@ else{console.log(newdo);
     container.append()
     
     myul.append(newdoli,trash1,newhr)
+
+
+    let newcheck=document.createElement('li')
+    newcheck.id="newli"
+    newcheck.className='fa fa-check'
+    newdoli.append(newcheck)
+    newcheck.style.display="none"
     
     
     trash1.addEventListener('click',function(){
@@ -39,14 +51,27 @@ else{console.log(newdo);
         trash1.remove()
         newhr.remove()
        })
+       
        newdoli.addEventListener('click',function(){
         if( newdoli.style.textDecoration!="line-through"){  
               newdoli.style.textDecoration="line-through"
-              newdoli.style.color="lightgreen"
+            //   newdoli.style.opacity=0.35
+        newcheck.style.display="block"
+        // newcheck.style.textDecoration="none"
+
+      
+            //   newicon.remove()
+
+            //   fa fa-check
     }
     else{
         newdoli.style.textDecoration="none"
         newdoli.style.color="black"
+        newdoli.style.opacity=1
+        newcheck.style.display="none"
+
+
+        
     }
     
        }
